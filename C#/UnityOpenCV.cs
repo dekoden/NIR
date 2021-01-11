@@ -139,9 +139,9 @@ public class UnityOpenCV : MonoBehaviour
         frameIndex++;
     }
 
-    [DllImport("QuadrocopterBrain", EntryPoint = "getImages")]
+    [DllImport("processingInOpenCV", EntryPoint = "getImages")]
     unsafe static extern int getImages(IntPtr raw, int width, int height, int numOfImg, int numOfCam);
 
-    [DllImport("QuadrocopterBrain", EntryPoint = "processImage")]
+    [DllImport("processingInOpenCV", EntryPoint = "processImage")]
     unsafe static extern void processImage(IntPtr data, int width, int height);
 }
